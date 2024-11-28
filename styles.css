@@ -1,0 +1,24 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .repo-list {
+    margin-top: 20px;
+  }
+  
+  .repo-item {
+    margin-bottom: 10px;
+  }
+  
+  .card-img-top {
+    max-width: 150px;
+    margin: 10px auto;
+    border-radius: 50%;
+  }
+  
