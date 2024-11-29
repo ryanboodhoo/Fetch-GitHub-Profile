@@ -25,7 +25,7 @@ fetchBtn.addEventListener("click", async () => {
     const reposData = await reposResponse.json();
 
     // Display last 10 repos
-    displayRepositories(reposData.slice(0, 10));
+    displayRepositories(reposData.slice(0, 5));
   } catch (error) {
     alert(`Error: ${error.message}`);
   }
@@ -37,7 +37,7 @@ function displayProfile(user) {
     <div class="card">
       <img src="${user.avatar_url}" class="card-img-top" alt="${user.name}">
       <div class="card-body">
-        <h5 class="card-title">${user.name || "No Name Available"}</h5>
+        <h5 class="card-title">${user.name || user.login || "No Name Available"}</h5>
         <p class="card-text">Joined: ${new Date(user.created_at).toDateString()}</p>
         <a href="${user.html_url}" target="_blank" class="btn btn-primary">View Github Profile</a>
       </div>
