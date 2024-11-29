@@ -24,7 +24,7 @@ fetchBtn.addEventListener("click", async () => {
     const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
     const reposData = await reposResponse.json();
 
-    // Display last 10 repos
+    // Display last 5 repos
     displayRepositories(reposData.slice(0, 5));
   } catch (error) {
     alert(`Error: ${error.message}`);
